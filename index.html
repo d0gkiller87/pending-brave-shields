@@ -5,7 +5,7 @@
 
     <script>
       document.getElementById('register').addEventListener('click', event => {
-        navigator.serviceWorker.register('/sw.js?' + Math.random().toString());
+        navigator.serviceWorker.register('/pending-brave-shields/sw.js?' + Math.random().toString());
       });
       document.getElementById('unregister').addEventListener('click', event => {
         navigator.serviceWorker.getRegistrations().then(registrations => {
