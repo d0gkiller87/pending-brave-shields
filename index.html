@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <button id="register">register service worker</button>
+    <button id="unregister">unregister service worker</button>
+
+    <script>
+      document.getElementById('register').addEventListener('click', event => {
+        navigator.serviceWorker.register('/sw.js?' + Math.random().toString());
+      });
+      document.getElementById('unregister').addEventListener('click', event => {
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+          registrations.forEach(reg => reg.unregister());
+        });
+      });
+    </script>
+
+    <script src="/pending-brave-shields/redirect_me.js"></script>
+  </body>
+</html>

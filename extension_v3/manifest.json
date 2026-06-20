@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Request Redirector (MV3)",
+  "version": "1.0",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "https://d0gkiller87.github.io/pending-brave-shields/redirect_me.js"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["redirected.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
